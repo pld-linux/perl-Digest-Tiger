@@ -5,7 +5,7 @@ Summary:	Digest::Tiger Perl module - Tiger hash implementation
 Summary(pl):	Modu³ perla Digest::Tiger - implementacja skrótu Tiger
 Name:		perl-Digest-Tiger
 Version:	0.02
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
