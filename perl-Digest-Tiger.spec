@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Digest
 %define		pnam	Tiger
@@ -7,7 +11,7 @@ Name:		perl-Digest-Tiger
 Version:	0.02
 Release:	2
 # same as perl
-License:	GPL Artistic or GPL
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f72ea5b048b87300f5c906ecc3fb436e
@@ -29,7 +33,10 @@ Tiger, zwracaj±cej warto¶æ 192-bitow±.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
