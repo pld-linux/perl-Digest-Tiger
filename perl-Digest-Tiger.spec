@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Digest
-%define		pnam	Tiger
+%define	pdir	Digest
+%define	pnam	Tiger
 Summary:	Digest::Tiger - Tiger hash implementation
 Summary(pl):	Digest::Tiger - implementacja skrótu Tiger
 Name:		perl-Digest-Tiger
