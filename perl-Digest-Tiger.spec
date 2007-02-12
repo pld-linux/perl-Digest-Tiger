@@ -6,7 +6,7 @@
 %define		pdir	Digest
 %define		pnam	Tiger
 Summary:	Digest::Tiger - Tiger hash implementation
-Summary(pl):	Digest::Tiger - implementacja skrótu Tiger
+Summary(pl.UTF-8):   Digest::Tiger - implementacja skrÃ³tu Tiger
 Name:		perl-Digest-Tiger
 Version:	0.02
 Release:	4
@@ -24,9 +24,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Digest::Tiger Perl module implements the Tiger hash, which returns a
 192-bit hash value.
 
-%description -l pl
-Modu³ Perla Digest::Tiger jest implementacj± funkcji mieszaj±cej
-Tiger, zwracaj±cej warto¶æ 192-bitow±.
+%description -l pl.UTF-8
+ModuÅ‚ Perla Digest::Tiger jest implementacjÄ… funkcji mieszajÄ…cej
+Tiger, zwracajÄ…cej wartoÅ›Ä‡ 192-bitowÄ….
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
