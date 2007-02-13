@@ -6,7 +6,7 @@
 %define		pdir	Digest
 %define		pnam	Tiger
 Summary:	Digest::Tiger - Tiger hash implementation
-Summary(pl.UTF-8):   Digest::Tiger - implementacja skrótu Tiger
+Summary(pl.UTF-8):	Digest::Tiger - implementacja skrótu Tiger
 Name:		perl-Digest-Tiger
 Version:	0.02
 Release:	4
