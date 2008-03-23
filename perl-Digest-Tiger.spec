@@ -13,9 +13,10 @@ Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Digest/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f72ea5b048b87300f5c906ecc3fb436e
 Patch0:		%{name}-amd64.patch
+URL:		http://search.cpan.org/dist/Digest-Tiger/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,8 +26,8 @@ Digest::Tiger Perl module implements the Tiger hash, which returns a
 192-bit hash value.
 
 %description -l pl.UTF-8
-Moduł Perla Digest::Tiger jest implementacją funkcji mieszającej
-Tiger, zwracającej wartość 192-bitową.
+Moduł Perla Digest::Tiger jest implementacją funkcji haszującej Tiger,
+zwracającej 192-bitową wartość skrótu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
