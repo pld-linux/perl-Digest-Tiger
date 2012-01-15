@@ -1,6 +1,6 @@
 --- Digest-Tiger-0.02/Tiger.xs.orig	2002-06-16 22:59:05.000000000 +0200
 +++ Digest-Tiger-0.02/Tiger.xs	2004-05-08 20:40:58.154403920 +0200
-@@ -2,16 +2,18 @@
+@@ -2,12 +2,14 @@
  #include "perl.h"
  #include "XSUB.h"
  
@@ -17,8 +17,3 @@
  typedef unsigned char byte;
  
  /* Big endian: */
--#if !(defined(__alpha)||defined(__i386__)||defined(__vax__))
-+#if !(defined(__alpha)||defined(__i386__)||defined(__vax__)||defined(__x86_64__))
- #define BIG_ENDIAN
- #else
- #undef BIG_ENDIAN

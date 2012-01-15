@@ -8,13 +8,13 @@
 Summary:	Digest::Tiger - Tiger hash implementation
 Summary(pl.UTF-8):	Digest::Tiger - implementacja skrótu Tiger
 Name:		perl-Digest-Tiger
-Version:	0.02
-Release:	6
+Version:	0.03
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Digest/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f72ea5b048b87300f5c906ecc3fb436e
+# Source0-md5:	30946a6d1b4451a34e142370c2947370
 Patch0:		%{name}-amd64.patch
 URL:		http://search.cpan.org/dist/Digest-Tiger/
 BuildRequires:	perl-devel >= 1:5.8.0
