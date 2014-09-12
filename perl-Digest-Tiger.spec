@@ -57,6 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Digest/Tiger.pm
 %dir %{perl_vendorarch}/auto/Digest/Tiger
 %{perl_vendorarch}/auto/Digest/Tiger/autosplit.ix
-%{perl_vendorarch}/auto/Digest/Tiger/Tiger.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Digest/Tiger/Tiger.so
 %{_mandir}/man3/*
