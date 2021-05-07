@@ -8,7 +8,7 @@ Summary:	Digest::Tiger - Tiger hash implementation
 Summary(pl.UTF-8):	Digest::Tiger - implementacja skrótu Tiger
 Name:		perl-Digest-Tiger
 Version:	0.03
-Release:	11
+Release:	12
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
