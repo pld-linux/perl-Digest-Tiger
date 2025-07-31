@@ -1,0 +1,43 @@
+--- Digest-Tiger-0.03/Tiger.xs.orig	2025-07-31 19:37:50.116129824 +0200
++++ Digest-Tiger-0.03/Tiger.xs	2025-07-31 19:45:35.151146811 +0200
+@@ -72,9 +72,9 @@
+     word64 res[3];
+   PPCODE:
+     data = (unsigned char *)(SvPV(ST(0), len));
+-    tiger(data, len,  res);
++    tiger((word64*)data, len,  res);
+ 
+-    endian_swap(res);
++    endian_swap((word32*)res);
+ 
+     ST(0) = sv_2mortal(newSVpv( (char *) res, 24));
+     XSRETURN(1);
+@@ -88,7 +88,7 @@
+     char hexhash_string[49];
+   PPCODE:
+     data = (unsigned char *)(SvPV(ST(0), len));
+-    tiger(data, len,  res);
++    tiger((word64*)data, len,  res);
+ 
+     /* we don't need an endian swap */
+ 
+--- Digest-Tiger-0.03/tigerhash.c.orig	2001-02-18 23:39:50.000000000 +0100
++++ Digest-Tiger-0.03/tigerhash.c	2025-07-31 19:41:37.856109602 +0200
+@@ -127,7 +127,7 @@
+ }
+ 
+ /* The compress function is a function. Requires smaller cache?    */
+-tiger_compress(word64 *str, word64 state[3])
++void tiger_compress(word64 *str, word64 state[3])
+ {
+   tiger_compress_macro(((word64*)str), ((word64*)state));
+ }
+@@ -140,7 +140,7 @@
+   tiger_compress_macro(((word64*)str), ((word64*)state))
+ #endif
+ 
+-tiger(word64 *str, word64 length, word64 res[3])
++void tiger(word64 *str, word64 length, word64 res[3])
+ {
+   register word64 i, j;
+   unsigned char temp[64];

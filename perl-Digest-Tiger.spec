@@ -15,6 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Digest/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	30946a6d1b4451a34e142370c2947370
 Patch0:		%{name}-amd64.patch
+Patch1:		types.patch
 URL:		http://search.cpan.org/dist/Digest-Tiger/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -31,6 +32,7 @@ zwracającej 192-bitową wartość skrótu.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__perl} Makefile.PL \
